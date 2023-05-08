@@ -26,24 +26,7 @@ app.use("/centers",router3)
 app.use("/books",router4)
 const PORT =process.env.PORT ||3000
 connect()
- //const reading=axios.get("http://localhost:3000/users/")
 
-
-// app.get("/",(req,res)=>{
-//     axios.get("http://localhost:3000/users/")
-//     .then(response=>{
-//         console.log(response.data[0].name);
-//         res.render("index",{user:response.data})})
-//     .catch((err)=>{console.log(err);})
-//    // res.render("index",{username:reading.d})
-// })
-app.get("/deleteuser/:id",(req,res)=>{
-    axios.delete(`http://localhost:3000/users/${req.params.id}`)
-    .then(response=>{
-     res.redirect("/")    
-    })
-    .catch((err)=>{console.log(err);})
-})
 app.get("/",(req,res)=>{
     res.render("home")
 })
